@@ -1,7 +1,7 @@
 randomize()
 
 var steps =  600; //bigger number = more floor tiles
-var enemies = 1;
+var enemies = 4;
 
 // get the tile layer map ID
 var wall_map_id = layer_tilemap_get_id("wall_tiles");
@@ -89,9 +89,9 @@ for (var yy = 1; yy < height -1; yy++){
 				obj_player.y = yy*CELL_HEIGHT+12
 			}
 			//create enemies randomly
-			if (irandom((height-yy-1)*(width-xx-1)) <= xx*yy)and instance_number(obj_enemy) < enemies{
-				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+14,-yy,obj_enemy)
-			}
+				if (irandom((height-yy)*(width-xx)) <= enemies)and instance_number(obj_enemy) < enemies{
+					instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+14,-yy,obj_enemy)
+				}
 			// add code here to create things on floor blocks
 		}
 	}

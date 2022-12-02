@@ -23,6 +23,7 @@
     {"id":{"name":"obj_level","path":"objects/obj_level/obj_level.yy",},"order":0,},
     {"id":{"name":"spr_player_left","path":"sprites/spr_player_left/spr_player_left.yy",},"order":1,},
     {"id":{"name":"r_loser_feedback","path":"rooms/r_loser_feedback/r_loser_feedback.yy",},"order":1,},
+    {"id":{"name":"spr_wall_black","path":"sprites/spr_wall_black/spr_wall_black.yy",},"order":5,},
     {"id":{"name":"spr_wall_side","path":"sprites/spr_wall_side/spr_wall_side.yy",},"order":0,},
     {"id":{"name":"obj_setup_pathfinding","path":"objects/obj_setup_pathfinding/obj_setup_pathfinding.yy",},"order":7,},
     {"id":{"name":"get_scores","path":"scripts/get_scores/get_scores.yy",},"order":0,},

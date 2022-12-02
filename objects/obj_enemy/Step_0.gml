@@ -3,7 +3,11 @@
 
 var px = obj_player.x
 var py = obj_player.y
-grid = obj_setup_pathfinding.grid
+
+mp_grid_add_instances(grid, object_index, 0)
+mp_grid_clear_rectangle(grid,x-4, y-4, x+4, y+4)
+
+//grid = obj_setup_pathfinding.grid
 //mp_potential_settings(10,90, 50, true)
 //mp_potential_step(px, py, 0.5, 1)
 //mp_potential_step_object(px, py, 0.5, obj_solid)
