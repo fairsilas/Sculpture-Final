@@ -89,7 +89,7 @@ for (var yy = 1; yy < height -1; yy++){
 				obj_player.y = yy*CELL_HEIGHT+12
 			}
 			//create enemies randomly
-				if (irandom((height-yy)*(width-xx)) <= enemies)and instance_number(obj_enemy) < enemies{
+				if (irandom((xx*yy)/enemies) <= enemies)and instance_number(obj_enemy) < enemies{
 					instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+14,-yy,obj_enemy)
 				}
 			// add code here to create things on floor blocks

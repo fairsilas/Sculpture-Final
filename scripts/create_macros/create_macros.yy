@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "creat_macros",
+  "name": "create_macros",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

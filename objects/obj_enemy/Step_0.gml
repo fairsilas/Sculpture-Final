@@ -1,16 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var px = obj_player.x
-var py = obj_player.y
+//avoid other enemies
+var check_x = x
+var check_y = y
+x = -10000
+y = -10000
+ne = instance_nearest(check_x,check_y, obj_enemy)
+x = check_x
+y = check_y
+//compare distance to player with nearest enemy
 
-mp_grid_add_instances(grid, object_index, 0)
-mp_grid_clear_rectangle(grid,x-4, y-4, x+4, y+4)
+dto_p = path_get_length(path)
 
-//grid = obj_setup_pathfinding.grid
-//mp_potential_settings(10,90, 50, true)
-//mp_potential_step(px, py, 0.5, 1)
-//mp_potential_step_object(px, py, 0.5, obj_solid)
+draw_text(ne.x,ne.y, dto_p-ne.dto_p)
+if(distance_to_object(ne) < 4){
+	if (dto_p < ne.dto_p){
+		path_speed = spd
+	}else{
+		path_speed = 0.5
+	}
+}
+
+motion_add(point_direction(),spd/10)
+
+
+
 
 //up
 if  (direction >= 90-45 and direction <90+45){

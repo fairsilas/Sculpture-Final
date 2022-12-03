@@ -3,24 +3,23 @@
 path_delete(path);
 path = path_add();
 
-target_x = obj_player.x
-target_y = obj_player.y
 
-mp_grid_add_instances(grid, obj_solid, 0)
+if !(collision_line(x,y, obj_player.x, obj_player.y, obj_solid, false,true)){
+	target_x = obj_player.x+(obj_player.x-obj_player.xprevious)*path_update_rate;
+	target_y = obj_player.y+(obj_player.y-obj_player.yprevious)*path_update_rate;
+}else{
+	if (x = target_x) and (y = target_y){
+	target_x = xstart
+	target_y = ystart
+	}
+}
 
+mp_grid_add_instances(grid, obj_solid, false)
+mp_grid_path(grid, path, x, y, target_x, target_y, true)
+//path_start(path, spd, path_action_stop, true)
 
-
-
-
-//mp_grid_add_instances(grid, instance_nearest(x,y,object_index), false)
-
-// use mp grid, make a path, ride on it
-mp_grid_path(grid, path, x, y, target_x, target_y, 0)
-
-// ride on path
-path_start(path, 1, path_action_stop, true)
 
 
 
 //loop
-alarm[10] = path_update_rate;
+alarm[10] = path_update_rate+distance_to_object(obj_player)/60;

@@ -8,3 +8,10 @@
 #macro WEST 2
 #macro EAST 4
 #macro SOUTH 5
+
+#macro IDLE 1
+#macro PACE 2
+#macro CHASE 4
+#macro HURT 5
+#macro ATTACK 6
+

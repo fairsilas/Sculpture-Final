@@ -6,6 +6,7 @@ global.enemy_speed = 100
 global.enemy_hp = 100
 global.player_speed = 100
 depth = -10000
+game_set_speed(60, gamespeed_fps);
 
 /* 
 	first create an account at https://gmscoreboard.com
