@@ -3,20 +3,27 @@
 path_delete(path);
 path = path_add();
 
-
-if !(collision_line(x,y, obj_player.x, obj_player.y, obj_solid, false,true)){
-	target_x = obj_player.x+(obj_player.x-obj_player.xprevious)*path_update_rate;
-	target_y = obj_player.y+(obj_player.y-obj_player.yprevious)*path_update_rate;
-}else{
-	if (x = target_x) and (y = target_y){
-	target_x = xstart
-	target_y = ystart
+if (state = IDLE){
+	if !(collision_line(x,y, obj_player.x, obj_player.y, obj_solid, false,true)){
+		target_x = obj_player.x+(obj_player.x-obj_player.xprevious)*path_update_rate;
+		target_y = obj_player.y+(obj_player.y-obj_player.yprevious)*path_update_rate;
+		alarm[11] = 200
+		path_speed = spd
+	}else{
+		if (alarm[11] >= 1){
+			target_x = obj_player.x+(obj_player.x-obj_player.xprevious)*path_update_rate;
+			target_y = obj_player.y+(obj_player.y-obj_player.yprevious)*path_update_rate;
+			path_speed = spd/2
+		}else{
+			target_x = xstart
+			target_y = ystart
+		}
 	}
-}
 
-mp_grid_add_instances(grid, obj_solid, false)
-mp_grid_path(grid, path, x, y, target_x, target_y, true)
-//path_start(path, spd, path_action_stop, true)
+	mp_grid_add_instances(grid, obj_solid, false)
+	mp_grid_path(grid, path, x, y, target_x, target_y, true)
+	path_start(path, spd, path_action_stop, true)
+}
 
 
 

@@ -5,6 +5,7 @@
   "resources": [
     {"id":{"name":"setup_gmscoreboard","path":"scripts/setup_gmscoreboard/setup_gmscoreboard.yy",},"order":4,},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"order":6,},
+    {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":11,},
     {"id":{"name":"show_scoreboard","path":"scripts/show_scoreboard/show_scoreboard.yy",},"order":5,},
     {"id":{"name":"obj_key","path":"objects/obj_key/obj_key.yy",},"order":3,},
     {"id":{"name":"spr_player_right","path":"sprites/spr_player_right/spr_player_right.yy",},"order":2,},
@@ -20,8 +21,10 @@
     {"id":{"name":"create_macros","path":"scripts/create_macros/create_macros.yy",},"order":0,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},"order":3,},
+    {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},"order":7,},
     {"id":{"name":"spr_chest","path":"sprites/spr_chest/spr_chest.yy",},"order":2,},
     {"id":{"name":"obj_level","path":"objects/obj_level/obj_level.yy",},"order":0,},
+    {"id":{"name":"obj_chest","path":"objects/obj_chest/obj_chest.yy",},"order":10,},
     {"id":{"name":"spr_player_left","path":"sprites/spr_player_left/spr_player_left.yy",},"order":1,},
     {"id":{"name":"scr_get_nearest","path":"scripts/scr_get_nearest/scr_get_nearest.yy",},"order":2,},
     {"id":{"name":"r_loser_feedback","path":"rooms/r_loser_feedback/r_loser_feedback.yy",},"order":1,},
@@ -32,6 +35,7 @@
     {"id":{"name":"get_scores","path":"scripts/get_scores/get_scores.yy",},"order":0,},
     {"id":{"name":"overwrite_scoreboard","path":"scripts/overwrite_scoreboard/overwrite_scoreboard.yy",},"order":2,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":2,},
+    {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},"order":6,},
     {"id":{"name":"r1","path":"rooms/r1/r1.yy",},"order":0,},
   ],
   "Options": [

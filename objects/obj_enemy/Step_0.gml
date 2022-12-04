@@ -22,7 +22,7 @@ if(distance_to_object(ne) < 4){
 	}
 }
 
-motion_add(point_direction(),spd/10)
+//motion_add(point_direction(),spd/10)
 
 
 

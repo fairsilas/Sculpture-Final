@@ -15,4 +15,4 @@ list = ds_priority_create()
 spd = 1
 
 //states
-state = "idle"
+state = IDLE
