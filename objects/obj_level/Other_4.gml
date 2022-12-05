@@ -1,5 +1,5 @@
 random_set_seed(global.score)
-randomize()
+//randomize()
 
 var steps =  500; //bigger number = more floor tiles
 var enemies = 3*global.difficulty;
@@ -91,20 +91,17 @@ for (var yy = 1; yy < height -1; yy++){
 				obj_player.y = yy*CELL_HEIGHT+12
 			}
 			//create enemies randomly
-			if (irandom(floorCount-instance_number(obj_floor) <= enemies)and instance_number(obj_enemy) <= enemies){
+			if (irandom(floorCount-(instance_number(obj_floor)/2) <= enemies)and instance_number(obj_enemy) <= enemies){
 				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+14,-yy,obj_enemy)
 			}
-			//create the key
-			if (irandom(floorCount-instance_number(obj_floor) <= 1)and instance_number(obj_key) <= 1){
-				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+15,-yy,obj_key)
-			}
+			
 			//create the door
-			if (irandom(floorCount-instance_number(obj_floor) <= 1)and instance_number(obj_door) <= 1){
-				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+15,-yy,obj_door)
+			if (irandom(floorCount- (instance_number(obj_floor)/2) <= 1)and instance_number(obj_door) < 1){
+				instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT,-yy,obj_door)
 			}
-			//create the door
-			if ((yy < height/1.5)and (xx > width/2)and !instance_exists(obj_monster)){
-				instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT,-yy,obj_monster)
+				//create the key
+			if (irandom(floorCount- (instance_number(obj_floor)/2) <= 1 )and instance_number(obj_key) < 1){
+				instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT,-yy,obj_key)
 			}
 			
 		}

@@ -3,14 +3,20 @@
 var check_x = x
 var check_y = y
 
+if (relocated = false)and distance_to_object(obj_enemy < 32){
+	var rand_floor  = find_random_instance(obj_floor)
+	x= rand_floor.x+8
+	y= rand_floor.y+15
+	relocated = true
+}
 
 
-var see_player = !(collision_line(x,y, obj_player.x, obj_player.y, obj_solid, false,true))and 
-					(distance_to_object(obj_player)< 120)and
-					((sprite_index = spr_player_up and obj_player.y < y)or
-					(sprite_index = spr_player_down and obj_player.y > y)or
-					(sprite_index = spr_player_left and obj_player.x < x)or
-					(sprite_index = spr_player_right and obj_player.x > x))
+var see_player = !(collision_line(x,y, obj_player.x, obj_player.y, obj_solid, false,true))and(( 
+					(distance_to_object(obj_player)< 100/global.difficulty)and
+					((sprite_index = spr_player_up and obj_player.y < y-10/global.difficulty)or
+					(sprite_index = spr_player_down and obj_player.y > y+10*global.difficulty)or
+					(sprite_index = spr_player_left and obj_player.x < x-10/global.difficulty)or
+					(sprite_index = spr_player_right and obj_player.x > x+10*global.difficulty)))or((distance_to_object(obj_player)< 8/global.difficulty)))
 randomize()
 if (speed >= path_speed){
 image_speed = speed
@@ -29,7 +35,9 @@ if (state = IDLE)or (state = RETURN){
 ///patrol around
 if (state = IDLE){
 	// move toward empty cell randomly
-	if(place_empty(x+dir_x, y+dir_y, obj_solid)){
+	dir_x = lengthdir_x(spd/2, rand_dir)
+		dir_y = lengthdir_y(spd/2, rand_dir)
+	if(!place_meeting(x+dir_x, y+dir_y, obj_solid)){
 		direction = rand_dir
 		speed = spd/2
 	}else{

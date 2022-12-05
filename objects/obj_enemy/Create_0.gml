@@ -1,5 +1,6 @@
 spd = 1*global.enemy_speed*global.difficulty
 
+relocated = false
 
 //set up CHASE variables
 path_update_rate = 30
