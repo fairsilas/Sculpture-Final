@@ -1,3 +1,5 @@
+
+
 //if there is no wall below turn into
 if !place_meeting(x,y+16,obj_wall) and !place_meeting(x,y+16,obj_wall_side){
 	instance_create_depth(x,y, -y, obj_wall_side)

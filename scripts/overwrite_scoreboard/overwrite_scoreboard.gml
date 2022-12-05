@@ -10,11 +10,11 @@ if !ds_list_empty(global.gmscoreboard_scores){
 }
 
 //replace variables
-set_score(string(global.difficulty), overwrite_index+5);
-set_score(string(global.map_size), overwrite_index+4);
-set_score(string(global.enemy_number), overwrite_index+3);
-set_score(string(global.enemy_speed), overwrite_index+2);
-set_score(string(global.enemy_hp), overwrite_index+1);
-set_score(string(global.player_speed), overwrite_index);
+set_score(string(round(global.difficulty*100)), overwrite_index+5);
+set_score(string(round(global.map_size)*100), overwrite_index+4);
+set_score(string(round(global.enemy_number)*100), overwrite_index+3);
+set_score(string(round(global.enemy_speed)*100), overwrite_index+2);
+set_score(string(round(global.enemy_hp)*100), overwrite_index+1);
+set_score(string(round(global.player_speed)*100), overwrite_index);
 }
 

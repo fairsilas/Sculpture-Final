@@ -14,4 +14,5 @@
 #macro CHASE 4
 #macro HURT 5
 #macro ATTACK 6
+#macro RETURN 7
 

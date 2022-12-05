@@ -1,7 +1,8 @@
+random_set_seed(global.score)
 randomize()
 
-var steps =  600; //bigger number = more floor tiles
-var enemies = 4;
+var steps =  500; //bigger number = more floor tiles
+var enemies = 3*global.difficulty;
 
 // get the tile layer map ID
 var wall_map_id = layer_tilemap_get_id("wall_tiles");
@@ -48,7 +49,7 @@ repeat (steps){
 	}
 	
 }
-
+var floorCount =0
 //place tiles
 for (var yy = 1; yy < height -1; yy++){
 	for (var xx = 1; xx < width -1; xx++){
@@ -65,7 +66,7 @@ for (var yy = 1; yy < height -1; yy++){
 						grid[# xx, yy] = WALL
 					}
 					grid[# xx, yy] = FLOOR
-					
+					floorCount ++
 				}
 		}
 	}
@@ -81,7 +82,8 @@ for (var yy = 1; yy < height -1; yy++){
 		}else if (grid[# xx, yy] != FLOOR){	
 			instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT, -10,obj_wall)
 		}else{
-			//put things here that need to be out in the open and not inside a wall
+			instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT, 1000,obj_floor)
+			// add code here to create things on floor blocks
 			var p_pos = false;
 				//
 			if (p_pos = false and instance_exists(obj_player)){
@@ -89,10 +91,23 @@ for (var yy = 1; yy < height -1; yy++){
 				obj_player.y = yy*CELL_HEIGHT+12
 			}
 			//create enemies randomly
-				if (irandom((xx*yy)/enemies) <= enemies)and instance_number(obj_enemy) < enemies{
-					instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+14,-yy,obj_enemy)
-				}
-			// add code here to create things on floor blocks
+			if (irandom(floorCount-instance_number(obj_floor) <= enemies)and instance_number(obj_enemy) <= enemies){
+				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+14,-yy,obj_enemy)
+			}
+			//create the key
+			if (irandom(floorCount-instance_number(obj_floor) <= 1)and instance_number(obj_key) <= 1){
+				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+15,-yy,obj_key)
+			}
+			//create the door
+			if (irandom(floorCount-instance_number(obj_floor) <= 1)and instance_number(obj_door) <= 1){
+				instance_create_depth(xx*CELL_WIDTH+8,yy*CELL_HEIGHT+15,-yy,obj_door)
+			}
+			//create the door
+			if ((yy < height/1.5)and (xx > width/2)and !instance_exists(obj_monster)){
+				instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT,-yy,obj_monster)
+			}
+			
 		}
 	}
 }
+

@@ -1,12 +1,14 @@
 //create global game variables to be adjusted
-global.difficulty = 100
-global.map_size = 100
-global.enemy_number = 100
-global.enemy_speed = 100
-global.enemy_hp = 100
-global.player_speed = 100
+global.difficulty = 1
+global.map_size = 1
+global.enemy_number = 1
+global.enemy_speed = 1
+global.enemy_hp = 1
+global.player_speed = 1
 
 global.score = 0
+global.keys = 0
+global.change_rate = 1.1 // the rate of difficulty change
 depth = -10000
 game_set_speed(60, gamespeed_fps);
 
