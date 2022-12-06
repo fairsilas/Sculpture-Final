@@ -18,7 +18,7 @@ dir_x = lengthdir_x(CELL_HEIGHT, rand_dir)
 dir_y = lengthdir_y(CELL_WIDTH, rand_dir)
 
 // create grid
-grid = mp_grid_create(0, 0, room_width/CELL_WIDTH, room_height/CELL_HEIGHT, CELL_WIDTH, CELL_HEIGHT)
+grid = obj_setup_pathfinding.grid
 list = ds_priority_create()
 
 

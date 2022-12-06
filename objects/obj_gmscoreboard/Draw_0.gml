@@ -1,8 +1,8 @@
 
 draw_set_color(c_white);
-draw_text(20,10,"Press Enter to set a score.");
-draw_text(20,30,"Press Shift to manually request score data.");
-draw_text(20,50,"Press Ctrl to open a web page to show your entire scoreboard.");
+//draw_text(20,10,"Press Enter to set a score.");
+//draw_text(20,30,"Press Shift to manually request score data.");
+//draw_text(20,50,"Press Ctrl to open a web page to show your entire scoreboard.");
 vx = camera_get_view_x(view_camera[0])
 vy = camera_get_view_y(view_camera[0])
 draw_set_font(fnt_gui)

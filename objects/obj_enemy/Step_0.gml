@@ -36,7 +36,7 @@ if (state = IDLE)or (state = RETURN){
 if (state = IDLE){
 	// move toward empty cell randomly
 	dir_x = lengthdir_x(spd/2, rand_dir)
-		dir_y = lengthdir_y(spd/2, rand_dir)
+	dir_y = lengthdir_y(spd/2, rand_dir)
 	if(!place_meeting(x+dir_x, y+dir_y, obj_solid)){
 		direction = rand_dir
 		speed = spd/2
@@ -114,16 +114,13 @@ if alarm[10] <= 1{
 	path = path_add();
 
 	if (state = CHASE){
-		
-		mp_grid_add_instances(grid, obj_solid, false)
-		mp_grid_path(grid, path, check_x, check_y, target_x, target_y, true)
+		mp_grid_path(obj_setup_pathfinding.grid, path, check_x, check_y, target_x, target_y, true)
 		path_start(path, spd, path_action_stop, true)
 	}
 	
 	//map out path to starting pos
 	if (state = RETURN){
-		mp_grid_add_instances(grid, obj_solid, false)
-		mp_grid_path(grid, path, check_x, check_y, target_x, target_y, true)
+		mp_grid_path(obj_setup_pathfinding.grid, path, check_x, check_y, target_x, target_y, true)
 		path_start(path, spd, path_action_stop, true)
 	}
 
