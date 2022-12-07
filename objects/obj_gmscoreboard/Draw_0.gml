@@ -6,7 +6,7 @@ draw_set_color(c_white);
 vx = camera_get_view_x(view_camera[0])
 vy = camera_get_view_y(view_camera[0])
 draw_set_font(fnt_gui)
-draw_text(vx, vy, "Level "+ string(global.score+1))
+
 //example of drawing scores
 if !ds_list_empty(global.gmscoreboard_scores){
 	var num = ds_list_size(global.gmscoreboard_scores);

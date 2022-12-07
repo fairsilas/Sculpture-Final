@@ -9,7 +9,10 @@
   "solid": true,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_player_down",
+    "path": "sprites/spr_player_down/spr_player_down.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_other_item",

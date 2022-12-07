@@ -19,7 +19,7 @@ if !ds_list_empty(global.gmscoreboard_scores){
 	global.map_size = variable_list[1]/100
 	global.enemy_number = variable_list[2]/100
 	global.enemy_speed = variable_list[3]/100
-	global.enemy_hp = variable_list[4]/100
+	global.player_lives = variable_list[4]/100
 	global.player_speed = variable_list[5]/100
 
 

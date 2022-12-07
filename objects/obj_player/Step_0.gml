@@ -38,3 +38,8 @@ if!k_a and !k_d and !k_w and !k_s{
 image_speed = 0
 image_index = 0
 }
+
+// lose the game
+if (global.lives <= 0){
+	room_goto(r_feedback);
+}

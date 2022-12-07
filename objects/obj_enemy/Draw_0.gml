@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description draw the grid
 
 depth = -y
 draw_self()

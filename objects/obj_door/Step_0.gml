@@ -9,7 +9,13 @@ global.keys--
 room_restart()	
 }
 
+if (relocated = false)or place_meeting(x,y,obj_solid){
+	inst_f = instance_nearest((x+obj_player.x*2)/4, y+(obj_player.y*2)/4, obj_floor)
+	x = inst_f.x
+	y = inst_f.y
+}
 
+//relocate the door to be in best good position
 if (relocated = false){
 	inst_f = instance_nearest(x,y, obj_floor)
 	x = inst_f.x

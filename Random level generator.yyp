@@ -36,7 +36,7 @@
     {"id":{"name":"spr_player_left","path":"sprites/spr_player_left/spr_player_left.yy",},"order":1,},
     {"id":{"name":"scr_get_nearest","path":"scripts/scr_get_nearest/scr_get_nearest.yy",},"order":2,},
     {"id":{"name":"spr_monster_tentacle_up","path":"sprites/spr_monster_tentacle_up/spr_monster_tentacle_up.yy",},"order":2,},
-    {"id":{"name":"r_loser_feedback","path":"rooms/r_loser_feedback/r_loser_feedback.yy",},"order":1,},
+    {"id":{"name":"r_feedback","path":"rooms/r_feedback/r_feedback.yy",},"order":1,},
     {"id":{"name":"obj_wall_side","path":"objects/obj_wall_side/obj_wall_side.yy",},"order":8,},
     {"id":{"name":"spr_wall_black","path":"sprites/spr_wall_black/spr_wall_black.yy",},"order":5,},
     {"id":{"name":"spr_wall_side","path":"sprites/spr_wall_side/spr_wall_side.yy",},"order":0,},
@@ -68,8 +68,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"r_feedback","path":"rooms/r_feedback/r_feedback.yy",},},
     {"roomId":{"name":"r1","path":"rooms/r1/r1.yy",},},
-    {"roomId":{"name":"r_loser_feedback","path":"rooms/r_loser_feedback/r_loser_feedback.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

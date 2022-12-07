@@ -1,2 +1,2 @@
-global.difficulty += (x-slide_x) * 
+//lobal.difficulty += (x-slide_x) * 
 

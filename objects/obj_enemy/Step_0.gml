@@ -154,7 +154,7 @@ else if(direction >= 0-44 and direction < 0+44){
 if place_meeting(x,y,obj_player){
 	room_restart()
 	//adapt game for cross device players
-	global.difficulty = global.difficulty/global.change_rate 
+	global.lives--
 }
 
 

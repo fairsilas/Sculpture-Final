@@ -1,4 +1,5 @@
-spd = 1*global.enemy_speed*global.difficulty
+spd = 0.5*global.enemy_speed*(1+(global.score/100))
+clamp(spd, 0.1, 1.1)
 
 relocated = false
 

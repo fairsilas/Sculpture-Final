@@ -1,8 +1,8 @@
 random_set_seed(global.score)
 //randomize()
 
-var steps =  500; //bigger number = more floor tiles
-var enemies = 3*global.difficulty;
+var steps =  500*global.map_size; //bigger number = more floor tiles
+var enemies = round(1*(global.enemy_number*2));
 
 // get the tile layer map ID
 var wall_map_id = layer_tilemap_get_id("wall_tiles");
@@ -20,7 +20,7 @@ var controller_y = height div 2
 var controller_direction = choose(0, 90, 180, 270); //chooses random  4 direction
 
 
-var direction_change_odds = 1;
+var direction_change_odds = 0; 
 repeat (steps){
 	grid[# controller_x, controller_y] = FLOOR;
 	
