@@ -1,5 +1,7 @@
-draw_sprite(spr_slider, 1, slide1_x, y)
-draw_sprite(spr_slider, 0, x, y)
+for (i=0; i<5; i++){
+	draw_sprite(spr_slider, 1, slide_x[i], y)
+	draw_sprite(spr_slider, 0, x, y)
+}
 
 
 var height = 4
@@ -11,6 +13,13 @@ if mouse_check_button(mb_left){
 }
 
 if keyboard_check_pressed(vk_enter){
+	//global.enemy_hp
+	//global.enemy_number
+	//global.enemy_speed
+	//global.map_size
+	//global.player_speed 
+	
+	
 	room_goto(r1)
 }
 
