@@ -3,7 +3,7 @@ draw_text_transformed(5, 20, "Changes will be subtle so drag the slider all the 
 
 for (i=0; i<5; i++){
 	draw_set_font(fnt_gui)
-	draw_text_transformed(x-sprite_width-50, slide_y[i]-5, slide_title[i] +" "+ string(slide_x[i]-x), 0.5, 0.5, 0)
+	draw_text_transformed(x-sprite_width-50, slide_y[i]-5, slide_title[i] +" "+ string(slide_x[i]-x/2) +"%", 0.5, 0.5, 0)
 	draw_sprite(spr_slider, 0, x, slide_y[i])
 	draw_sprite(spr_slider, 1, slide_x[i], slide_y[i])
 }

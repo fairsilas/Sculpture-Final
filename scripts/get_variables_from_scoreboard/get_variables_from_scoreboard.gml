@@ -22,6 +22,6 @@ if !ds_list_empty(global.gmscoreboard_scores){
 	global.player_lives = variable_list[4]/100
 	global.player_speed = variable_list[5]/100
 
-
+	show_message("Scores retrieved")
 }
 }

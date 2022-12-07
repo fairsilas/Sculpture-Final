@@ -16,5 +16,6 @@ set_score(string(round(global.enemy_number)*100), overwrite_index+3);
 set_score(string(round(global.enemy_speed)*100), overwrite_index+2);
 set_score(string(round(global.player_lives)*100), overwrite_index+1);
 set_score(string(round(global.player_speed)*100), overwrite_index);
+show_message("Scores overwritten")
 }
 
