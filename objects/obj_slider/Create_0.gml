@@ -1,7 +1,7 @@
-slide_title[0] = "Overall difficulty";
-slide_title[1] = "Number of enemies";
+slide_title[0] = "Player lives";
+slide_title[1] = "Player speed";
 slide_title[2] = "Enemy speed";
-slide_title[3] = "Player speed";
+slide_title[3] = "Number of enemies";
 slide_title[4] = "Level size";
 
 slide_x[0] = x;

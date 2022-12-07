@@ -56,10 +56,10 @@
     {"name":"iOS","path":"options/ios/options_ios.yy",},
     {"name":"Linux","path":"options/linux/options_linux.yy",},
     {"name":"macOS","path":"options/mac/options_mac.yy",},
-    {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"tvOS","path":"options/tvos/options_tvos.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"Main","path":"options/main/options_main.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
@@ -68,8 +68,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"r_feedback","path":"rooms/r_feedback/r_feedback.yy",},},
     {"roomId":{"name":"r1","path":"rooms/r1/r1.yy",},},
+    {"roomId":{"name":"r_feedback","path":"rooms/r_feedback/r_feedback.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

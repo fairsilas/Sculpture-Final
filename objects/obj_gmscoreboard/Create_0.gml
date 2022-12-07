@@ -9,9 +9,9 @@ global.player_speed = 1
 global.score = 0
 global.lives = 10
 global.keys = 0
-global.change_rate = 1.1 // the rate of difficulty change
 depth = -10000
 game_set_speed(60, gamespeed_fps);
+room_speed = 60;
 
 /* 
 	first create an account at https://gmscoreboard.com
