@@ -70,7 +70,7 @@ if (state = CHASE){
 				if (dto_p < ne.dto_p){
 					path_speed = spd
 				}else{
-					path_speed = spd/2
+					path_speed = slowed_spd
 				}
 			}
 			if (see_player){
@@ -98,9 +98,9 @@ if (state = RETURN){
 	dto_p = path_get_length(path)
 	if(distance_to_object(ne) < 8){
 		if (dto_p < ne.dto_p){
-			path_speed = spd/2
+			path_speed = slowed_spd
 		}else{
-			path_speed = spd/4
+			path_speed = slowed_spd/2
 		}
 	}
 	if distance_to_point(xstart,ystart)<1{

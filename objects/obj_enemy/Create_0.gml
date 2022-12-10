@@ -1,5 +1,6 @@
 spd = 0.6*global.enemy_speed*(1+(global.score/100))
 clamp(spd, 0.5, 1.2)
+slowed_spd = random_range(spd/3, spd/1.5)
 
 //flag for whether enemy has been relocated
 relocated = false
