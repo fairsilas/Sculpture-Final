@@ -155,10 +155,12 @@ if place_meeting(x,y,obj_player){
 	room_restart()
 	//adapt game for cross device players
 	global.lives--
+	global.key = false;
 }
 
 if place_meeting(x,y,obj_solid){
-	move_towards_point(x+8,y+15,obj_floor)
+	ne = instance_nearest(x,y,obj_floor)
+	move_towards_point(ne.x+8,ne.y+15,1)
 }
 
 

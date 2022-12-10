@@ -1,6 +1,7 @@
 // Set a seed for the random number generator
 random_set_seed(global.score);
 
+
 // Set the number of steps to generate the map
 var steps =  300 * global.map_size*(1+global.score/50); // bigger number = more floor tiles
 var direction_change_odds = clamp(round(global.score/50),0, 2); //how long passages
