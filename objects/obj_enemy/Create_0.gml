@@ -1,5 +1,5 @@
-spd = 0.7*global.enemy_speed*(1+(global.score/100))
-clamp(spd, 0.1, 1.1)
+spd = 0.6*global.enemy_speed*(1+(global.score/100))
+clamp(spd, 0.5, 1.2)
 
 //flag for whether enemy has been relocated
 relocated = false

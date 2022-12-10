@@ -1,5 +1,5 @@
 draw_text_transformed(5, 5, "What adjustments would you make to this game?", 0.7, 0.7, 0)
-draw_text_transformed(5, 20, "Changes will be subtle so drag the slider all the way if you are sure something needs to change.", 0.3, 0.3, 0)
+draw_text_transformed(5, 20, "Your feedback will cause slight changes when someone else plays.", 0.3, 0.3, 0)
 draw_text_transformed(5, room_height-12, "(Press enter to submit)", 0.7, 0.7, 0)
 
 for (i=0; i<5; i++){

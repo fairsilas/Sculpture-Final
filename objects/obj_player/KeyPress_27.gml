@@ -1,1 +1,1 @@
-game_end()
+room_goto(r_feedback);

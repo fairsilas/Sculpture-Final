@@ -137,17 +137,17 @@ if alarm[10] <= 1{
 //up
 if  (direction >= 90-44 and direction <90+44){
 	sprite_index = spr_player_up
-}else
+}
 //down
 if (direction >= 270-44 and direction <270+44){
 	sprite_index = spr_player_down
-}else	
+}	
 //left
 if (direction >= 180-44 and direction <180+44){
 	sprite_index = spr_player_left
 }
 //right
-else if(direction >= 0-44 and direction < 0+44){
+if(direction >= 0-44 and direction < 0+44){
 	sprite_index = spr_player_right
 }
 
@@ -155,6 +155,10 @@ if place_meeting(x,y,obj_player){
 	room_restart()
 	//adapt game for cross device players
 	global.lives--
+}
+
+if place_meeting(x,y,obj_solid){
+	move_towards_point(x+8,y+15,obj_floor)
 }
 
 

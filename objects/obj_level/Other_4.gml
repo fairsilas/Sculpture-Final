@@ -2,8 +2,9 @@
 random_set_seed(global.score);
 
 // Set the number of steps to generate the map
-var steps =  500 * global.map_size; // bigger number = more floor tiles
-var enemies = round(1 * (global.enemy_number * 2));
+var steps =  300 * global.map_size*(1+global.score/50); // bigger number = more floor tiles
+var direction_change_odds = clamp(round(global.score/50),0, 2); //how long passages
+var enemies = clamp(round(global.enemy_number *(1+global.score/5)),2, 12);
 
 // Get the tile layer map ID
 var wall_map_id = layer_tilemap_get_id("wall_tiles");
@@ -11,7 +12,7 @@ var wall_map_id = layer_tilemap_get_id("wall_tiles");
 // Set up the grid
 var grid_width = room_width / CELL_WIDTH;
 var grid_height = room_height / CELL_HEIGHT;
-var grid = ds_grid_create(grid_width, grid_height);
+grid = ds_grid_create(grid_width, grid_height);
 
 // Convert the room to a grid of 32x32 sections
 ds_grid_set_region(grid, 0, 0, grid_width, grid_height, VOID);
@@ -21,7 +22,7 @@ var controller_x = grid_width / 2;
 var controller_y = grid_height / 2;
 var controller_direction = choose(0, 90, 180, 270); // chooses random 4 direction
 
-var direction_change_odds = 0; 
+
 
 repeat (steps){
 	grid[# controller_x, controller_y] = FLOOR;

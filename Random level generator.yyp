@@ -44,11 +44,13 @@
     {"id":{"name":"spr_wall_side","path":"sprites/spr_wall_side/spr_wall_side.yy",},"order":0,},
     {"id":{"name":"spr_monster_tentacle_right","path":"sprites/spr_monster_tentacle_right/spr_monster_tentacle_right.yy",},"order":3,},
     {"id":{"name":"obj_setup_pathfinding","path":"objects/obj_setup_pathfinding/obj_setup_pathfinding.yy",},"order":7,},
+    {"id":{"name":"snd_door","path":"sounds/snd_door/snd_door.yy",},"order":0,},
     {"id":{"name":"get_scores","path":"scripts/get_scores/get_scores.yy",},"order":0,},
     {"id":{"name":"overwrite_scoreboard","path":"scripts/overwrite_scoreboard/overwrite_scoreboard.yy",},"order":2,},
     {"id":{"name":"r_menu","path":"rooms/r_menu/r_menu.yy",},"order":2,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":2,},
     {"id":{"name":"spr_monster_tentacle_left","path":"sprites/spr_monster_tentacle_left/spr_monster_tentacle_left.yy",},"order":4,},
+    {"id":{"name":"general_game_controller","path":"objects/general_game_controller/general_game_controller.yy",},"order":18,},
     {"id":{"name":"obj_monster","path":"objects/obj_monster/obj_monster.yy",},"order":12,},
     {"id":{"name":"fnt_gui","path":"fonts/fnt_gui/fnt_gui.yy",},"order":0,},
     {"id":{"name":"spr_key","path":"sprites/spr_key/spr_key.yy",},"order":6,},
@@ -71,8 +73,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"r1","path":"rooms/r1/r1.yy",},},
     {"roomId":{"name":"r_menu","path":"rooms/r_menu/r_menu.yy",},},
+    {"roomId":{"name":"r1","path":"rooms/r1/r1.yy",},},
     {"roomId":{"name":"r_feedback","path":"rooms/r_feedback/r_feedback.yy",},},
   ],
   "Folders": [
