@@ -1,1 +1,1 @@
-global.difficulty += 50
+room_goto(r_feedback)

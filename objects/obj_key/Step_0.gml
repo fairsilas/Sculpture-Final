@@ -1,6 +1,6 @@
 if place_meeting(x,y,obj_player){
 	instance_destroy()
-	global.keys++
+	global.key = true
 }
 
 if (relocated = false)or place_meeting(x,y,obj_solid){

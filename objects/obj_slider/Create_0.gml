@@ -1,8 +1,8 @@
-slide_title[0] = "Player lives";
-slide_title[1] = "Player speed";
-slide_title[2] = "Enemy speed";
-slide_title[3] = "Number of enemies";
-slide_title[4] = "Level size";
+slide_title[0] = "Player lives: ";
+slide_title[1] = "Player speed: ";
+slide_title[2] = "Enemy speed: ";
+slide_title[3] = "Number of enemies: ";
+slide_title[4] = "Level size: ";
 
 slide_x[0] = x;
 slide_x[1] = x;
@@ -17,7 +17,11 @@ slide_y[3] = y+32*3;
 slide_y[4] = y+32*4;
 
 
+
 height = 8
 width = (sprite_width/2)-8
 
+slide_states = ["", "Less", "More"]
+
+slide_state = [0,0,0,0,0]
 

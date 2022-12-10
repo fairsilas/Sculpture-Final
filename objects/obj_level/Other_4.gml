@@ -1,26 +1,28 @@
-random_set_seed(global.score)
-//randomize()
+// Set a seed for the random number generator
+random_set_seed(global.score);
 
-var steps =  500*global.map_size; //bigger number = more floor tiles
-var enemies = round(1*(global.enemy_number*2));
+// Set the number of steps to generate the map
+var steps =  500 * global.map_size; // bigger number = more floor tiles
+var enemies = round(1 * (global.enemy_number * 2));
 
-// get the tile layer map ID
+// Get the tile layer map ID
 var wall_map_id = layer_tilemap_get_id("wall_tiles");
 
-//set up grid
-width = room_width div CELL_WIDTH;
-height = room_height div CELL_HEIGHT;
-grid = ds_grid_create(width, height);
-//convert room to grid of 32x32 sections
-ds_grid_set_region(grid, 0, 0, width, height, VOID);
+// Set up the grid
+var grid_width = room_width / CELL_WIDTH;
+var grid_height = room_height / CELL_HEIGHT;
+var grid = ds_grid_create(grid_width, grid_height);
 
-//create the controller in the center of the grid
-var controller_x = width div 2 
-var controller_y = height div 2
-var controller_direction = choose(0, 90, 180, 270); //chooses random  4 direction
+// Convert the room to a grid of 32x32 sections
+ds_grid_set_region(grid, 0, 0, grid_width, grid_height, VOID);
 
+// Create the controller in the center of the grid
+var controller_x = grid_width / 2;
+var controller_y = grid_height / 2;
+var controller_direction = choose(0, 90, 180, 270); // chooses random 4 direction
 
 var direction_change_odds = 0; 
+
 repeat (steps){
 	grid[# controller_x, controller_y] = FLOOR;
 	
@@ -40,19 +42,19 @@ repeat (steps){
 	controller_y += y_direction;
 	
 	// make sure we don't go outside the grid
-	if (controller_x < 2 or controller_x >= width -2) {
+	if (controller_x < 2 or controller_x >= grid_width -2) {
 		controller_x += -x_direction * 2;
 	}
 
-	if (controller_y < 2 or controller_y >= height -2) {
+	if (controller_y < 2 or controller_y >= grid_height -2) {
 		controller_y += -y_direction * 2;
 	}
 	
 }
 var floorCount =0
 //place tiles
-for (var yy = 1; yy < height -1; yy++){
-	for (var xx = 1; xx < width -1; xx++){
+for (var yy = 1; yy < grid_height -1; yy++){
+	for (var xx = 1; xx < grid_width -1; xx++){
 		if (grid[# xx, yy] != FLOOR){
 			//shows which tiles are empty around
 				var north_tile = grid[# xx, yy-1] == VOID; //true or false
@@ -72,8 +74,8 @@ for (var yy = 1; yy < height -1; yy++){
 	}
 }
 
-for (var yy = 1; yy < height -1; yy++){
-	for (var xx = 1; xx < width -1; xx++){
+for (var yy = 1; yy < grid_height -1; yy++){
+	for (var xx = 1; xx < grid_width -1; xx++){
 		//walls next to floor
 		if (grid[# xx, yy] != FLOOR)and(grid[# xx, yy+1] == FLOOR){
 			with(instance_create_depth(xx*CELL_WIDTH,yy*CELL_HEIGHT, -10,obj_wall)){

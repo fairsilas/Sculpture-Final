@@ -8,7 +8,7 @@ global.player_speed = 1
 
 global.score = 0
 global.lives = 10
-global.keys = 0
+global.key = false
 depth = -10000
 game_set_speed(60, gamespeed_fps);
 room_speed = 60;

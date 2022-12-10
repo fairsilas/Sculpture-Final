@@ -5,7 +5,7 @@ if place_meeting(x, y, obj_player)and global.keys > 0{
 }
 if door_timer <=0{
 global.score++
-global.keys--
+global.key = false
 room_restart()	
 }
 
